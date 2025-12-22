@@ -4,7 +4,6 @@ import { envs } from './config';
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { RpcCustomExceptionFilter } from './common';
 
-
 async function bootstrap() {
   const logger = new Logger('Main-Gateway');
 
@@ -16,7 +15,7 @@ async function bootstrap() {
       whitelist: true,
       forbidNonWhitelisted: true,
     }),
-  ); 
+  );
 
   app.useGlobalFilters(new RpcCustomExceptionFilter());
 
